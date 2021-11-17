@@ -1,0 +1,15 @@
+{
+  "name": "@ctrip/falcon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.dev.sh.ctripcorp.com:dcs-frontend/falcon.git"
+  },
+  "author": "xli27",
+  "license": "ISC"
+}
