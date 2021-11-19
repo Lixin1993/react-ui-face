@@ -1,0 +1,27 @@
+{
+    "presets": [
+        "next/babel",
+        "@zeit/next-typescript/babel",
+        "@babel/preset-react",
+        ["@babel/preset-typescript", {
+            "allowDeclareFields": true,
+            "isTSX": true,
+            "allExtensions": true
+        }],
+        ["@babel/env", {
+            "modules": "auto",
+            "targets": {
+                "chrome": "80"
+            },
+            "useBuiltIns": "usage",
+            "corejs": 3
+        }]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ],
+    "overrides": [{
+        "include": ["pages", "components"],
+        "exclude": ["node_modules"]
+    }]
+}

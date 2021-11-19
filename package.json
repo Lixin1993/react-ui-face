@@ -5,18 +5,37 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:tsc": "tsc",
+    "build:dev": "rm -rf dist && babel ./components --extensions .tsx,.ts,.js -d dist && npm run build:tsc",
+    "clean": "rm -rf node_modules package-lock.json && npm install"
+  },
+  "dependencies": {
+    "@ctrip/ediath-thanos": "^1.1.0",
+    "@ctrip/thanos-ext": "^1.0.40",
+    "@ctrip/thanos-ui-basic": "^1.0.21",
+    "@ctrip/thanos-util": "^1.0.31",
+    "core-js": "^3.19.1",
+    "next": "9.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "peerDependencies": {
     "next": "9.1.0",
-    "react": "16.0.0",
-    "react-dom": "16.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "devDependencies": {
-    "@types/node": "16.11.7",
-    "@types/react": "17.0.35",
-    "eslint": "7.32.0",
-    "eslint-config-next": "12.0.4",
-    "typescript": "4.4.4"
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@types/node": "^14.17.0",
+    "@types/react": "^16.0.0",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "eslint": "^5.16.0",
+    "node-sass": "^4.14.0",
+    "typescript": "^3.0.0"
   }
 }
