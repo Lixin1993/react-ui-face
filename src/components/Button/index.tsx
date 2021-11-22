@@ -1,4 +1,6 @@
 import React from 'react'
+import FullButton from '../FullButton'
+
 import './index.scss'
 
 export interface IProps {
@@ -10,9 +12,13 @@ export interface IProps {
 const Button = (props: IProps) => {
     const { type } = props
     return (
-        <div className={`falcon-button ${type}`} style={props.style}>
-            {props.children || 'btn'}
-        </div>
+        <>
+            <FullButton />
+            <div className={`falcon-button ${type}`} style={props.style}>
+                {props.children || 'btn'}
+            </div>
+        </>
+
     )
 }
 

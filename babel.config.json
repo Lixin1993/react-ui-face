@@ -21,7 +21,7 @@
         "@babel/plugin-transform-runtime"
     ],
     "overrides": [{
-        "include": ["pages", "components"],
+        "include": ["pages", "src"],
         "exclude": ["node_modules"]
     }]
 }

@@ -1,13 +1,18 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-const ActiveLink = ({ text, href }) => {
+interface ActiveLinkIProps {
+    text: string
+    href: string
+}
+
+const ActiveLink = ({ text, href }: ActiveLinkIProps) => {
     const router = useRouter()
     const style = {
       marginRight: 10,
       color: router.asPath === href ? 'red' : 'black',
     }
-  
+
     return (
       <a href={href} style={style}>
         {text}
@@ -21,7 +26,6 @@ const Index = () => {
             <ActiveLink text={'button'} href={'/button'} />
         </>
     )
-
 }
 
 export default Index
