@@ -13,10 +13,11 @@ try {
   const mainData = JSON.parse(mainContent)
 
   if (distData.version === mainData.version) {
-    process.exit()
-    throw new Error('please update package.json version')
+    process.on('exit', (code) => {
+      console.log('Process beforeExit event with code: ', code);
+    });
   }
- 
+
 } catch(err) {
   console.info(err);
 }

@@ -15,10 +15,6 @@
     "clean": "rm -rf node_modules package-lock.json && npm install"
   },
   "dependencies": {
-    "@ctrip/ediath-thanos": "^1.1.0",
-    "@ctrip/thanos-ext": "^1.0.40",
-    "@ctrip/thanos-ui-basic": "^1.0.21",
-    "@ctrip/thanos-util": "^1.0.31",
     "core-js": "^3.19.1",
     "next": "9.1.0",
     "react": "^16.0.0",
